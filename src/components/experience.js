@@ -1,6 +1,5 @@
 import Tasks from "./tasks";
 import {useState} from "react";
-import uniqid from "uniqid";
 
 function Experience(){
   let [tasks, setTasks] = useState(Array(0));
@@ -8,7 +7,11 @@ function Experience(){
   
   function addTask(){
     setDescription('');
-    setTasks([...tasks, {id: uniqid(), description:description}])
+    setTasks([...tasks, description])
+  }
+
+  function removeTask(){
+    setTasks([...tasks.slice(0, tasks.length-1)])
   }
   return(
     <div>
@@ -30,6 +33,7 @@ function Experience(){
           name="description" 
           size="10"/>      
         <button className="tasks" onClick={()=>{addTask()}}>Add Task</button>
+        <button className="tasks" onClick={()=>{removeTask()}}>Remove Task</button>
         <Tasks tasks={tasks}/>
       </div>
     </div>
