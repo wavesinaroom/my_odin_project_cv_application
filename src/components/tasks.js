@@ -1,8 +1,11 @@
-function Tasks(){
+function Tasks({tasks}){
+
+  const renderList = tasks.map(task=><li>{task}</li>)
+
   return(
     <div>
       <ul>
-        <li>A task</li>
+        {renderList}
       </ul>
     </div>
   );
