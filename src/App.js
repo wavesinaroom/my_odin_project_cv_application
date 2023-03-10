@@ -1,11 +1,13 @@
+import General from "./components/general";
 import Education from "./components/education";
-import General from "./components/general"
+import Work from "./components/work";
 
 function App() {
   return (
     <>
       <General/>
       <Education/>
+      <Work/>
     </>
   );
 }
