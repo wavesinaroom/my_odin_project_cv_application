@@ -1,6 +1,7 @@
+import uniqid from 'uniqid'
 function Certification(){
   return(
-    <div>
+    <div key={uniqid()}>
       <label for="school">School</label>
       <input type="text" className="school" name="school" size="10"/>
       <label for="title">Title</label>
