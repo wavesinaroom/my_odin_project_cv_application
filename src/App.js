@@ -1,12 +1,12 @@
 import General from "./components/general";
-import Module from "./components/module";
+import Section from "./components/section";
 
 function App() {
   return (
     <>
       <General/>
-      <Module title="Education"/>
-      <Module title="Work"/>
+      <Section title="Education"/>
+      <Section title="Work"/>
     </>
   );
 }

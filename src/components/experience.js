@@ -1,4 +1,3 @@
-import uniqid from 'uniqid'
 import Tasks from "./tasks";
 import {useState} from "react";
 
@@ -15,7 +14,7 @@ function Experience(){
     setTasks([...tasks.slice(0, tasks.length-1)])
   }
   return(
-    <div key={uniqid()}>
+    <>
       <label for="company">Company</label>
       <input type="text" className="company" name="company" size="10"/>      
       <label for="position">Position</label>
@@ -37,7 +36,7 @@ function Experience(){
         <button className="tasks" onClick={()=>{removeTask()}}>Remove Task</button>
         <Tasks tasks={tasks}/>
       </div>
-    </div>
+    </>
   )
 }
 export default Experience;
