@@ -2,7 +2,7 @@ import Tasks from "./tasks";
 import {useState} from "react";
 
 function Experience(){
-  let [tasks, setTasks] = useState(Array(0));
+  let [tasks, setTasks] = useState([]);
   const [description, setDescription] = useState('');
   
   function addTask(){
