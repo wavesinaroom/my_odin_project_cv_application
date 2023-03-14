@@ -5,16 +5,14 @@ import Modules from "./modules";
 
 export default function Section (props){
   const [components, setComponents] = useState([]);
-  const [component, setComponent] = useState();
-
+  let component;
   function addComponent(title){
-    setComponent();
     switch(title){
       case "Education":
-        setComponent(<Certification/>);
+        component = <Certification/>;
         break;
       case "Work":
-        setComponent(<Experience/>);
+        component = <Experience/>;
         break; 
       default:
         throw new Error (`Invalid panel type`);
