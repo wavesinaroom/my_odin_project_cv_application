@@ -8,7 +8,7 @@ export default function Section (props){
   const [component, setComponent] = useState();
 
   function addComponent(title){
-    console.log(title)
+    setComponent();
     switch(title){
       case "Education":
         setComponent(<Certification/>);
