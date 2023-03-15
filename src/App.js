@@ -3,11 +3,10 @@ import General from "./components/general";
 import Section from "./components/section";
 
 function App() {
-  let render;
+  const [render,setRender] = useState('');
   const [isHTML,setIsHTML] = useState(false);
   function getInnerHTML(){
-    render = document.getElementById('root').innerHTML;
-    console.log(render);
+    setRender(document.getElementById('root').innerHTML);
   }
   return (
     <>
@@ -16,13 +15,18 @@ function App() {
         <General/>
         <Section title="Education"/>
         <Section title="Work"/>
-        <input type="submit" value="submit" onClick={()=>setIsHTML(true)}/>
+        <input 
+          type="submit" 
+          value="submit" 
+          onClick={()=>{
+            getInnerHTML();
+            setIsHTML(true)}}/>
       </form>}
     {isHTML && 
       <div>
         <button onClick={()=>setIsHTML(false)}>Edit</button>
         <article>
-          yo
+          {render}
         </article>
       </div>}
     </>
