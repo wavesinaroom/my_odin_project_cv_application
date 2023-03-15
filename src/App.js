@@ -1,27 +1,33 @@
 import {useState} from "react";
-import General from "./components/general";
-import Section from "./components/section";
+import Module from "./components/module";
+
 
 function App() {
   const [render,setRender] = useState('');
   const [isHTML,setIsHTML] = useState(false);
-  function getInnerHTML(){
-    setRender(document.getElementById('root').innerHTML);
-  }
-  return (
-    <>
-    {!isHTML && 
+
+  function DefaultRender(){
+    return(
       <form>
-        <General/>
-        <Section title="Education"/>
-        <Section title="Work"/>
+        <Module title="General"/>
         <input 
           type="submit" 
           value="submit" 
           onClick={()=>{
             getInnerHTML();
             setIsHTML(true)}}/>
-      </form>}
+      </form>
+    );
+  } 
+
+  function getInnerHTML(){
+    setRender(document.getElementById('root').innerHTML);
+  }
+  return (
+    <>
+    {!isHTML && 
+      <DefaultRender/>
+    }
     {isHTML && 
       <div>
         <button onClick={()=>setIsHTML(false)}>Edit</button>
