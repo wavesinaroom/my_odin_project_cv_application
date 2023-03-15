@@ -34,9 +34,9 @@ export default function Section (props){
     return(
         <div className="section">
           <h1>{props.title}</h1>
+          <Module title="Experience"/>
           <button onClick={()=>{addComponent(props.title)}}>Add</button>
           <button onClick={()=>{removeComponent()}}>Remove</button>
-          <Module title="Experience"/>
           <Modules modules={components}/>
         </div>
     );
