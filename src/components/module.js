@@ -43,7 +43,7 @@ function Module(props){
         </>
       );
     case "Task":
-      return `<input type="text" className="task" name="task" />`;  
+      return <input type="text" className="task" name="task" />;  
     default:
       throw new Error(`Invalid module type`);
   }
