@@ -1,5 +1,4 @@
 import React, { useState} from "react";
-import Certification from "./certification";
 import Module from "./module";
 import Modules from "./modules";
 
@@ -10,7 +9,7 @@ export default function Section (props){
   function addComponent(title){
     switch(title){
       case "Education":
-        component = <Certification/>;
+        component = <Module title="Certification"/>;
         break;
       case "Work":
         component = <Section title="Experience"/>;

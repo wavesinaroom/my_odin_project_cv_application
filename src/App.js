@@ -1,5 +1,6 @@
 import {useState} from "react";
 import Module from "./components/module";
+import Section from "./components/section";
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     return(
       <form>
         <Module title="General"/>
+        <Section title="Education"/>
         <input 
           type="submit" 
           value="submit" 
