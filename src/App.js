@@ -1,18 +1,30 @@
-import {useState} from 'react';
-import {renderToStaticMarkup} from 'react-dom/server'
+import {useState} from "react";
 import General from "./components/general";
 import Section from "./components/section";
 
 function App() {
-  const [render,setRender] = useState('');
-
+  let render;
+  const [isHTML,setIsHTML] = useState(false);
+  function getInnerHTML(){
+    render = document.getElementById('root').innerHTML;
+    console.log(render);
+  }
   return (
     <>
-      <General/>
-      <Section title="Education"/>
-      <Section title="Work"/>
-      <input type="submit" value="submit" onClick={()=>setRender(renderToStaticMarkup(<App/>))}/>
-      {render}
+    {!isHTML && 
+      <form>
+        <General/>
+        <Section title="Education"/>
+        <Section title="Work"/>
+        <input type="submit" value="submit" onClick={()=>setIsHTML(true)}/>
+      </form>}
+    {isHTML && 
+      <div>
+        <button onClick={()=>setIsHTML(false)}>Edit</button>
+        <article>
+          yo
+        </article>
+      </div>}
     </>
   );
 }
