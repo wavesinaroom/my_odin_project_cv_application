@@ -1,43 +1,36 @@
-import {useState} from "react";
+import {useState } from "react";
 import Module from "./components/module";
 import Section from "./components/section";
 
 
 function App() {
-  const [render,setRender] = useState('');
-  const [isHTML,setIsHTML] = useState(false);
+  const [markup,setMarkup] = useState('');
 
-  function DefaultRender(){
-    return(
-      <form>
+  return (
+    <>
+     <form id="main">
         <Module title="General"/>
         <Section title="Education"/>
         <Section title="Work"/>
-        <input 
-          type="submit" 
-          value="submit" 
-          onClick={()=>{
-            getInnerHTML();
-            setIsHTML(true)}}/>
+       <input  
+        type="submit" 
+        value="submit" 
+        onClick={()=>{
+          setMarkup(document.getElementById('root').innerHTML);
+          document.getElementById('markup').hidden = false;
+          document.getElementById('main').hidden = true;
+         }}
+        />
       </form>
-    );
-  } 
-
-  function getInnerHTML(){
-    setRender(document.getElementById('root').innerHTML);
-  }
-  return (
-    <>
-    {!isHTML && 
-      <DefaultRender/>
-    }
-    {isHTML && 
-      <div>
-        <button onClick={()=>setIsHTML(false)}>Edit</button>
+      <div hidden id="markup">
+        <button onClick={()=>{
+          document.getElementById('main').hidden = false;
+          document.getElementById('markup').hidden = true;
+          }}>HTML</button>
         <article>
-          {render}
+          {markup}
         </article>
-      </div>}
+      </div>
     </>
   );
 }

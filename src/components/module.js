@@ -1,7 +1,5 @@
-import {useState} from "react";
 
 function Module(props){
-  const [values,setValues] = useState([])
   const title = props.title;
 
   switch(title){
