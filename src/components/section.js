@@ -1,6 +1,5 @@
 import React, { useState} from "react";
 import Module from "./module";
-import Modules from "./modules";
 
 export default function Section (props){
   const [components, setComponents] = useState([]);
@@ -37,7 +36,9 @@ export default function Section (props){
           <Module title="Experience"/>
           <button onClick={()=>{addComponent(props.title)}}>Add</button>
           <button onClick={()=>{removeComponent()}}>Remove</button>
-          <Modules modules={components}/>
+          <ul>
+            {components}
+          </ul>
         </div>
     );
 
@@ -48,7 +49,9 @@ export default function Section (props){
           <h1>{props.title}</h1>
           <button onClick={()=>{addComponent(props.title)}}>Add</button>
           <button onClick={()=>{removeComponent()}}>Remove</button>
-          <Modules modules={components}/>
+          <ul>
+            {components}
+          </ul>
         </div>
       </>
     );
