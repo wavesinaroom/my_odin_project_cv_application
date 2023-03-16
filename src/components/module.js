@@ -1,15 +1,13 @@
-import uniqid from 'uniqid'
 import {useState} from "react";
 
 function Module(props){
   const [values,setValues] = useState([])
-  console.log(values)
   const title = props.title;
 
   switch(title){
     case "Certification":
       return(
-        <li key={uniqid()}>
+        <li >
           <label for="school">School</label>
           <input id="module" type="text" className="certification" name="school" size="10"  />
           <label for="title">Title</label>
@@ -20,7 +18,7 @@ function Module(props){
       );
     case "Experience":
       return(
-        <li key={uniqid()}>
+        <li>
           <label for="company">Company</label>
           <input type="text" className="company" name="company" size="10" />      
           <label for="position">Position</label>
@@ -34,7 +32,7 @@ function Module(props){
       );
     case "General":
       return(
-        <li key={uniqid()}>
+        <li>
           <label for="name">Candidate&apos;s name</label>
           <input type="text" className="name" name="name" required size="10"/>
           <label for="phone">Phone</label>
@@ -45,7 +43,7 @@ function Module(props){
       );
     case "Task":
       return(
-        <li key={uniqid()}>
+        <li>
           <input type="text" className="task" name="task" />
         </li>
       ) ;  

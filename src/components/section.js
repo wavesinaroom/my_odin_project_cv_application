@@ -1,4 +1,5 @@
 import React, { useState} from "react";
+import uniqid from 'uniqid'
 import Module from "./module";
 
 export default function Section (props){
@@ -8,13 +9,13 @@ export default function Section (props){
   function addComponent(title){
     switch(title){
       case "Education":
-        component = <Module title="Certification"/>;
+        component = <Module title="Certification" key={uniqid()}/>;
         break;
       case "Work":
-        component = <Section title="Experience"/>;
+        component = <Section title="Experience" key={uniqid()}/>;
         break; 
       case "Experience":
-        component = <Module title = "Task"/>;
+        component = <Module title = "Task" key={uniqid()}/>;
         break;
       default:
         throw new Error (`Invalid panel type`);
