@@ -1,17 +1,21 @@
+import {useState} from "react";
 
 function Module(props){
   const title = props.title;
+  const [one,setOne] = useState('');
+  const [two,setTwo] = useState('');
+  const [three,setThree] = useState('');
 
   switch(title){
     case "Certification":
       return(
         <li >
           <label for="school">School</label>
-          <input id="module" type="text" className="certification" name="school" size="10"  />
+          <input type="text" className="certification" name="school" size="10" value={one} onChange={(e)=>setOne(e.target.value)}  />
           <label for="title">Title</label>
-          <input type="text" className="certification" name="title" size="10" />
+          <input type="text" className="certification" name="title" size="10" value={two} onChange={(e)=>setTwo(e.target.value)} />
           <label for="Date">Date</label>
-          <input type="date" className="certification" name="date" size="10" />
+          <input type="date" className="certification" name="date" size="10" value={three} onChange={(e)=>setThree(e.target.value)}/>
         </li>
       );
     case "Experience":
