@@ -1,3 +1,4 @@
+import './App.css';
 import {useState } from "react";
 import Module from "./components/module";
 import Section from "./components/section";
