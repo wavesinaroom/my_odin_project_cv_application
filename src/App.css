@@ -1,5 +1,7 @@
 *{
-  outline: 1px solid red;
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: red;
 }
 body {
   background-color: #524466;
@@ -22,8 +24,8 @@ li{
   list-style-type: none;
 }
 
-li .experience{
-  padding: 0.7em;
+ul{
+  margin: 0em;
 }
 
 .general{
@@ -36,9 +38,12 @@ li .experience{
   padding: 1em;
   padding-top: 0.2em;
   margin: 1em; 
+  border: thin, solid, grey ;
+  border-radius: 0.5em;
 }
 
 .section .button-set{
   display: flex;
   justify-content: flex-end;
+  margin-top: -1..22em;
 }

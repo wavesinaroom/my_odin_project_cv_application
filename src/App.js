@@ -12,7 +12,7 @@ function App() {
      <form id="main">
         <Module title="General"/>
         <Section title="Education"/>
-        <Section title="Work"/>
+        <Section title="Work Experience"/>
        <input  
         type="submit" 
         value="submit" 
