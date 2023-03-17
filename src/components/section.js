@@ -11,7 +11,7 @@ export default function Section (props){
       case "Education":
         component = <Module title="Certification" key={uniqid()}/>;
         break;
-      case "Work":
+      case "Work Experience":
         component = <Section title="Experience" key={uniqid()}/>;
         break; 
       case "Experience":
