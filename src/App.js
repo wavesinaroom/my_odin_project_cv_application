@@ -8,7 +8,7 @@ function App() {
   const [markup,setMarkup] = useState('');
 
   return (
-    <>
+    <div className="app">
      <form id="main">
         <Module title="General"/>
         <Section title="Education"/>
@@ -34,7 +34,7 @@ function App() {
           {markup}
         </article>
       </div>
-    </>
+    </div>
   );
 }
 
