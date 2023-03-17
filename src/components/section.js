@@ -32,29 +32,31 @@ export default function Section (props){
   if(props.title === "Experience"){
 
     return(
-        <div className="section">
-          <h1>{props.title}</h1>
-          <Module title="Experience"/>
+      <div className="section">
+        <h1>{props.title}</h1>
+        <Module title="Experience"/>
+        <div className="button-set">
           <button onClick={()=>{addComponent(props.title)}}>Add</button>
           <button onClick={()=>{removeComponent()}}>Remove</button>
-          <ul>
-            {components}
-          </ul>
         </div>
+        <ul>
+          {components}
+        </ul>
+      </div>
     );
 
   }else{
     return(
-      <>
-        <div className="section">
-          <h1>{props.title}</h1>
+      <div className="section">
+        <h1>{props.title}</h1>
+        <div className="button-set">
           <button onClick={()=>{addComponent(props.title)}}>Add</button>
           <button onClick={()=>{removeComponent()}}>Remove</button>
-          <ul>
-            {components}
-          </ul>
         </div>
-      </>
+        <ul>
+          {components}
+        </ul>
+      </div>
     );
   }
 }
