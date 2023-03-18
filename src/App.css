@@ -34,6 +34,11 @@ ul{
   align-items: flex-start;
 }
 
+.general >*{
+  margin-left: 1em;
+  margin-top: 0.5em;
+} 
+
 .section{
   background-color: green;
   padding: 1em;
@@ -47,4 +52,8 @@ ul{
   display: flex;
   justify-content: flex-end;
   margin-top: -1..22em;
+}
+
+input[type=submit]{
+  margin-left: 1em;
 }
