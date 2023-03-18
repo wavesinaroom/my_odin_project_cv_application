@@ -1,11 +1,14 @@
 *{
+  /*
   outline-style: solid;
   outline-width: 1px;
   outline-color: red;
+  */
 }
 body {
-  background-color: #524466;
+  height: 100vh;
   font-family: 'Garamond', 'Georgia', 'Times New Roman';
+  background: linear-gradient(to bottom right,blue,pink);
 }
 
 .app{
@@ -28,13 +31,21 @@ ul{
   margin: 0em;
 }
 
+input{
+  border-radius: 0.3em;
+}
+
+input[type=submit]{
+  margin-left: 1em;
+}
+
 .general{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.general >*{
+.general>*{
   margin-left: 1em;
   margin-top: 0.5em;
 } 
@@ -54,6 +65,3 @@ ul{
   margin-top: -1..22em;
 }
 
-input[type=submit]{
-  margin-left: 1em;
-}
