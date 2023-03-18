@@ -8,7 +8,7 @@
 body {
   height: 100vh;
   font-family: 'Garamond', 'Georgia', 'Times New Roman';
-  background: linear-gradient(to bottom right,blue,pink);
+  background: linear-gradient(to bottom right,#7eb5ca,#bfc2ca );
 }
 
 .app{
