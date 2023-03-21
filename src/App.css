@@ -1,4 +1,5 @@
 *{
+  font-family: 'Garamond', 'Georgia', 'Times New Roman';
   /*
   outline-style: solid;
   outline-width: 1px;
@@ -7,7 +8,6 @@
 }
 body {
   height: 100vh;
-  font-family: 'Garamond', 'Georgia', 'Times New Roman';
   background: linear-gradient(to bottom right,#7eb5ca,#bfc2ca );
 }
 
@@ -33,7 +33,11 @@ ul{
 }
 
 input{
-  border-radius: 0.3em;
+  border-top-style: none;
+  border-right-style: none;
+  border-left-style: none;
+  border-bottom:0.1em solid ;
+  background-color: transparent;
 }
 
 input[type=submit]{
@@ -49,21 +53,17 @@ input[type=submit]{
 .general>*{
   margin-left: 1em;
   margin-top: 0.5em;
+  margin-right: 3em;
 } 
 
 .section{
-  background-color: #FDF7E9;
   padding: 1em;
   padding-top: 0.2em;
   margin: 1em; 
-  border: thin, solid, black ;
-  border-radius: 0.7em;
-
 }
 
 .section .button-set{
   display: flex;
   justify-content: flex-end;
-  margin-top: -1..22em;
 }
 
