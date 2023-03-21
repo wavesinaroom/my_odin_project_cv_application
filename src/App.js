@@ -10,6 +10,7 @@ function App() {
   return (
     <div className="app">
      <form id="main">
+        <h1>CV application</h1>
         <Module title="General"/>
         <Section title="Education"/>
         <Section title="Work Experience"/>
