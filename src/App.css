@@ -13,7 +13,7 @@ body {
 
 .app{
   position: absolute;
-  background-color: white;
+  background-color: #FFFAF1;
   top: 20%;
   left: 30%;
   width: 40vw;
@@ -21,6 +21,7 @@ body {
   padding: 5em;
   border: thin;
   border-radius: 1em;
+  box-shadow: 10px 5px 5px grey;
 }
 
 li{
@@ -51,12 +52,13 @@ input[type=submit]{
 } 
 
 .section{
-  background-color: green;
+  background-color: #FDF7E9;
   padding: 1em;
   padding-top: 0.2em;
   margin: 1em; 
-  border: thin, solid, grey ;
-  border-radius: 0.5em;
+  border: thin, solid, black ;
+  border-radius: 0.7em;
+
 }
 
 .section .button-set{
