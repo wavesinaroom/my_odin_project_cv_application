@@ -29,9 +29,9 @@ function App() {
           document.getElementById('html').innerHTML = '';
           document.getElementById('main').hidden = false;
           }}>Back</button>
-        <article id="html">
+        <p id="html">
           {markup}
-        </article>
+        </p>
       </div>
     </div>
   );
