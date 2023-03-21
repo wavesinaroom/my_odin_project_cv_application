@@ -38,6 +38,7 @@ input{
   border-left-style: none;
   border-bottom:0.1em solid ;
   background-color: transparent;
+  margin-right: 5em;
 }
 
 input[type=submit]{
