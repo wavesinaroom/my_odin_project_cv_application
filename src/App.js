@@ -13,16 +13,15 @@ function App() {
         <Module title="General"/>
         <Section title="Education"/>
         <Section title="Work Experience"/>
-       <input  
+       <button  
         type="submit" 
-        value="submit" 
         onClick={()=>{
           setMarkup('');
           setMarkup(document.getElementById('root').innerHTML);
           document.getElementById('markup').hidden = false;
           document.getElementById('main').hidden = true;
          }}
-        />
+        >Submit</button>
       </form>
       <div hidden id="markup">
         <button onClick={()=>{
