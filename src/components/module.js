@@ -11,27 +11,27 @@ function Module(props){
     case "Certification":
       return(
         <li className="certification" >
-          <input type="text" placeholder="School" size="10" value={one} onChange={(e)=>setOne(e.target.value)}  />
-          <input type="text" placeholder="Title" size="10" value={two} onChange={(e)=>setTwo(e.target.value)} />
-          <input type="date" placeholder="Date" size="10" value={three} onChange={(e)=>setThree(e.target.value)}/>
+          <input type="text" placeholder="School" value={one} onChange={(e)=>setOne(e.target.value)}  />
+          <input type="text" placeholder="Title"  value={two} onChange={(e)=>setTwo(e.target.value)} />
+          <input type="date" placeholder="Date"  value={three} onChange={(e)=>setThree(e.target.value)}/>
         </li>
       );
     case "Experience":
       return(
         <li className="experience">
-          <input type="text" placeholder="Company" size="10" value={one} onChange={(e)=>setOne(e.target.value)} />      
-          <input type="text" placeholder="Position" size="10" value={two} onChange={(e)=>setTwo(e.target.value)}/>      
-          <input type="date" placeholder="From" size="10" value={three} onChange={(e)=>setThree(e.target.value)}/>      
-          <input type="date" placeholder="Until" size="10" value={four} onChange={(e)=>setFour(e.target.value)}/>      
+          <input type="text" placeholder="Company"  value={one} onChange={(e)=>setOne(e.target.value)} />      
+          <input type="text" placeholder="Position"  value={two} onChange={(e)=>setTwo(e.target.value)}/>      
+          <input type="date" placeholder="From"  value={three} onChange={(e)=>setThree(e.target.value)}/>      
+          <input type="date" placeholder="Until"  value={four} onChange={(e)=>setFour(e.target.value)}/>      
           <h3>Tasks</h3>
         </li>
       );
     case "General":
       return(
         <li className="general">
-          <input type="text" placeholder="Name" required size="10" value={one} onChange={(e)=>setOne(e.target.value)}/>
-          <input type="tel" placeholder="Phone" required size="10" value={two} onChange={(e)=>setTwo(e.target.value)}/>
-          <input type="email" placeholder="E-mail" required size="10" value={three} onChange={(e)=>setThree(e.target.value)}/>
+          <input type="text" placeholder="Name" required value={one} onChange={(e)=>setOne(e.target.value)}/>
+          <input type="tel" placeholder="Phone" required value={two} onChange={(e)=>setTwo(e.target.value)}/>
+          <input type="email" placeholder="E-mail" required value={three} onChange={(e)=>setThree(e.target.value)}/>
         </li>
       );
     case "Task":
